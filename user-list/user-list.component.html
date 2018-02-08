@@ -1,0 +1,14 @@
+<table class="table table-sm table-hover">
+    <tr *ngFor="let user of userService.usersList">
+        <td>{{user.FIRST_NAME}} - {{user.LAST_NAME}}</td>
+        <td>{{user.FULL_NAME}} , {{user.USERNAME}}</td>
+        <td>
+            <a class="btn" (click)="showForEdit(user)">
+                <i class="fa fa-pencil-square-o"></i>
+            </a>
+            <a class="btn text-danger" (click)="deleteUser(user)">
+                <i class="fa fa-trash-o"></i>
+            </a>
+        </td>
+    </tr>
+</table>
